@@ -71,8 +71,8 @@ M.populate_buf = function(buf, plugins)
     local active = plugin.active and "Yes" or "No"
 
     -- Pad columns to fixed width
-    name = name .. string.rep(" ", name_width - #name)
-    version = version .. string.rep(" ", version_width - #version)
+    name = name .. string.rep(" ", name_width - vim.fn.strdisplaywidth(name))
+    version = version .. string.rep(" ", version_width - vim.fn.strdisplaywidth(version))
 
     local line = name .. "  " .. version .. "  " .. active
     table.insert(lines, line)
