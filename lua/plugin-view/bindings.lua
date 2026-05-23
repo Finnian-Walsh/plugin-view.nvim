@@ -32,7 +32,7 @@ M.setup = function(buf, win)
       vim.notify("Plugin not found in current line", vim.log.levels.ERROR)
       return
     end
-    vim.pack.delete { plugin_name }
+    vim.pack.del { plugin_name }
   end)
 end
 
