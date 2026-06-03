@@ -5,6 +5,7 @@ local M = {}
 
 M.create_floating_win = function()
   local buf = vim.api.nvim_create_buf(false, true)
+  vim.bo[buf].filetype = "plugin_view"
 
   local function calculate_dimension(dim_option, total_cells)
     -- Add validation
